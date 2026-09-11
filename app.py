@@ -151,7 +151,7 @@ GACHA_CARDS = [
         "rank": "SR",
         "title": "🤝 황금 인맥 네트워킹 귀재",
         "power": 78,
-        "desc": "처음 본 사람과 5분 만에 불알친구 맺기!",
+        "desc": "처음 본 사람과 5분 만에 형 동생 맺기!",
     },
     {
         "rank": "SR",
@@ -337,9 +337,7 @@ GACHA_CARDS = [
     },
 ]
 
-# ----------------------------------------------------
-# [아기자기 모바일 컴팩트 CSS 스타일링]
-# ----------------------------------------------------
+# CSS 모바일 스타일링
 st.markdown(
     """
     <style>
@@ -358,80 +356,18 @@ st.markdown(
     div[data-testid="stExpander"] { background-color: #181925 !important; border: 1px solid #333446 !important; border-radius: 14px !important; }
     div[data-testid="stExpander"] summary { background-color: #232538 !important; color: #FFD166 !important; font-weight: bold !important; font-size: 0.9rem !important; }
     
-    /* 등급별 알록달록 파스텔 스타일링 */
-    .card-SSR { 
-        background: linear-gradient(135deg, #FFF3B0, #CA8A04); 
-        color: #1E1B4B; 
-        border-radius: 14px; 
-        padding: 12px; 
-        text-align: center; 
-        font-weight: 800; 
-        border: 2px solid #FEF08A;
-        box-shadow: 0 4px 15px rgba(202, 138, 4, 0.4);
-    }
-    .card-SR { 
-        background: linear-gradient(135deg, #DDD6FE, #7C3AED); 
-        color: #FFFFFF; 
-        border-radius: 14px; 
-        padding: 12px; 
-        text-align: center; 
-        font-weight: 800;
-        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
-    }
-    .card-R { 
-        background: linear-gradient(135deg, #A7F3D0, #059669); 
-        color: #064E3B; 
-        border-radius: 14px; 
-        padding: 12px; 
-        text-align: center; 
-        font-weight: 800;
-        box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4);
-    }
-    .card-N { 
-        background: linear-gradient(135deg, #FBCFE8, #DB2777); 
-        color: #FFFFFF; 
-        border-radius: 14px; 
-        padding: 12px; 
-        text-align: center; 
-        font-weight: 800;
-        box-shadow: 0 4px 15px rgba(219, 39, 119, 0.4);
-    }
+    .card-SSR { background: linear-gradient(135deg, #FFF3B0, #CA8A04); color: #1E1B4B; border-radius: 14px; padding: 12px; text-align: center; font-weight: 800; border: 2px solid #FEF08A; box-shadow: 0 4px 15px rgba(202, 138, 4, 0.4); }
+    .card-SR { background: linear-gradient(135deg, #DDD6FE, #7C3AED); color: #FFFFFF; border-radius: 14px; padding: 12px; text-align: center; font-weight: 800; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4); }
+    .card-R { background: linear-gradient(135deg, #A7F3D0, #059669); color: #064E3B; border-radius: 14px; padding: 12px; text-align: center; font-weight: 800; box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4); }
+    .card-N { background: linear-gradient(135deg, #FBCFE8, #DB2777); color: #FFFFFF; border-radius: 14px; padding: 12px; text-align: center; font-weight: 800; box-shadow: 0 4px 15px rgba(219, 39, 119, 0.4); }
 
-    /* 대진표 박스 */
-    .match-card {
-        background-color: #181925;
-        border: 1px solid #2E3148;
-        border-radius: 12px;
-        padding: 10px 14px;
-        margin-bottom: 8px;
-        font-size: 0.95rem;
-    }
+    .match-card { background-color: #181925; border: 1px solid #2E3148; border-radius: 12px; padding: 10px 14px; margin-bottom: 8px; font-size: 0.95rem; }
+    .wait-box { background-color: #181925; border: 2px dashed #FFD166; border-radius: 12px; padding: 12px; text-align: center; font-size: 0.95rem; color: #FFD166; font-weight: bold; }
     
-    /* 귀여운 버튼 디자인 */
-    div.stButton > button {
-        background: linear-gradient(135deg, #06D6A0, #118AB2) !important;
-        color: #ffffff !important;
-        font-size: 0.95rem !important;
-        font-weight: bold !important;
-        border-radius: 30px !important;
-        border: none !important;
-        padding: 8px 16px !important;
-        box-shadow: 0 3px 10px rgba(6, 214, 160, 0.3) !important;
-    }
-    div.stButton > button[kind="secondary"] {
-        background: linear-gradient(135deg, #FF70A6, #FF5964) !important;
-        color: #ffffff !important;
-    }
+    div.stButton > button { background: linear-gradient(135deg, #06D6A0, #118AB2) !important; color: #ffffff !important; font-size: 0.95rem !important; font-weight: bold !important; border-radius: 30px !important; border: none !important; padding: 8px 16px !important; box-shadow: 0 3px 10px rgba(6, 214, 160, 0.3) !important; }
+    div.stButton > button[kind="secondary"] { background: linear-gradient(135deg, #FF70A6, #FF5964) !important; color: #ffffff !important; }
     
-    .start-btn button {
-        background: linear-gradient(135deg, #FFD166, #FF9F1C) !important;
-        color: #121212 !important;
-        font-size: 1.25rem !important;
-        font-weight: 800 !important;
-        padding: 12px !important;
-        border-radius: 30px !important;
-        box-shadow: 0 4px 15px rgba(255, 209, 102, 0.4) !important;
-    }
+    .start-btn button { background: linear-gradient(135deg, #FFD166, #FF9F1C) !important; color: #121212 !important; font-size: 1.25rem !important; font-weight: 800 !important; padding: 12px !important; border-radius: 30px !important; box-shadow: 0 4px 15px rgba(255, 209, 102, 0.4) !important; }
     </style>
 """,
     unsafe_allow_html=True,
@@ -442,7 +378,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# 기기 세션별 로컬 타임스탬프
 if "last_seen_update" not in st.session_state:
     st.session_state["last_seen_update"] = 0
 if "my_name" not in st.session_state:
@@ -463,7 +398,7 @@ with st.expander(
 
     if is_host:
         st.session_state["my_name"] = "방장"
-        st.info("👑 진행자 권한으로 대진표 및 경기를 제어합니다.")
+        st.info("👑 방장(진행자) 권한 접속: 게임 생성 및 경기 진행 가능")
     else:
         col1, col2 = st.columns([3, 1])
         with col1:
@@ -481,7 +416,6 @@ with st.expander(
             if st.button("🎲 뽑기!", use_container_width=True):
                 if input_name and input_name != "방장":
                     st.session_state["my_name"] = input_name
-                    # 가챠 능력치 카드 무작위 뽑기
                     drawn = random.choice(GACHA_CARDS)
                     game_state["players"][input_name] = {
                         "card": drawn,
@@ -490,7 +424,6 @@ with st.expander(
                     game_state["last_update"] = time.time()
                     st.rerun()
 
-    # 내가 뽑은 카드 상태 표시
     my_name = st.session_state["my_name"]
     if my_name in game_state["players"]:
         p_info = game_state["players"][my_name]
@@ -506,7 +439,6 @@ with st.expander(
             unsafe_allow_html=True,
         )
 
-    # 대규모 인원 명단 실시간 표시
     if game_state["players"]:
         st.write(
             f"**현재 등록 선수단 ({len(game_state['players'])}명 접속 중):**"
@@ -534,7 +466,7 @@ st.divider()
 
 
 # ----------------------------------------------------
-# [2] 토너먼트 대진표 자동 생성 함수 (60명+ 대규모 수용)
+# [2] 대진표 무작위 자동 생성 함수 (방장 전용)
 # ----------------------------------------------------
 def build_tournament_tree():
     players_list = list(game_state["players"].keys())
@@ -553,9 +485,7 @@ def build_tournament_tree():
 
     n = len(players_list)
     if n > 32:
-        game_state["current_round_name"] = (
-            f"🔥 {n}강전 (대규모 서바이벌)"
-        )
+        game_state["current_round_name"] = f"🔥 {n}강전 (대규모 서바이벌)"
     elif n > 16:
         game_state["current_round_name"] = "⚔️ 32강전"
     elif n > 8:
@@ -570,7 +500,7 @@ def build_tournament_tree():
     game_state["last_update"] = time.time()
 
 
-# 방장 대진표 제어 버튼
+# 게임 시작 전 컨트롤 영역 (방장만 조작 가능하도록 권한 분리)
 if not game_state["is_game_started"]:
     if is_host or my_name == "방장":
         if len(game_state["players"]) < 2:
@@ -580,24 +510,26 @@ if not game_state["is_game_started"]:
         else:
             st.markdown("<div class='start-btn'>", unsafe_allow_html=True)
             if st.button(
-                "🚀 대진표 생성 & 토너먼트 시작!",
+                "🚀 대진표 자동 생성 & 게임 시작!",
                 use_container_width=True,
             ):
                 build_tournament_tree()
                 st.rerun()
             st.markdown("</div>", unsafe_allow_html=True)
     else:
-        st.info(
-            "⏳ 방장(선생님)이 대진표를 만들고 토너먼트를 시작할 때까지 대기해 주세요!"
+        # 일반 참가자 화면 안내
+        st.markdown(
+            "<div class='wait-box'>⏳ 방장(선생님)이 대진표를 짜고 게임을 시작할 때까지 잠시 대기해 주세요!</div>",
+            unsafe_allow_html=True,
         )
 
 # ----------------------------------------------------
-# [3] 토너먼트 진행 및 사다리 승부
+# [3] 토너먼트 진행 및 사다리 승부 (방장만 진행 가능)
 # ----------------------------------------------------
 if game_state["is_game_started"] and not game_state["champion"]:
     st.subheader(f"{game_state['current_round_name']}")
 
-    # 대진표 일괄 노출
+    # 대진표 표시
     for idx, match in enumerate(game_state["tournament_tree"]):
         p1, p2 = match[0], match[1]
         st.markdown(
@@ -605,6 +537,7 @@ if game_state["is_game_started"] and not game_state["champion"]:
             unsafe_allow_html=True,
         )
 
+    # 경기 진행 버튼도 방장 전용으로 제어
     if is_host or my_name == "방장":
         st.markdown("<div class='start-btn'>", unsafe_allow_html=True)
         if st.button(
@@ -626,7 +559,6 @@ if game_state["is_game_started"] and not game_state["champion"]:
                     pow1 = game_state["players"][p1]["power"]
                     pow2 = game_state["players"][p2]["power"]
 
-                    # 전투력 기반 가중치 승부 (변수 ±15%)
                     total = pow1 + pow2
                     chance_p1 = (pow1 / total) + random.uniform(-0.15, 0.15)
 
@@ -638,16 +570,14 @@ if game_state["is_game_started"] and not game_state["champion"]:
 
             game_state["match_results"] = results
 
-            # 우승자 판정 및 다음 라운드 대진
+            # 최종 1인 가리기
             if len(next_round) == 1:
                 game_state["champion"] = next_round[0]
             else:
                 new_tree = []
                 for i in range(0, len(next_round), 2):
                     if i + 1 < len(next_round):
-                        new_tree.append(
-                            [next_round[i], next_round[i + 1]]
-                        )
+                        new_tree.append([next_round[i], next_round[i + 1]])
                     else:
                         new_tree.append([next_round[i], "🍀 부전승"])
 
@@ -672,15 +602,19 @@ if game_state["is_game_started"] and not game_state["champion"]:
             game_state["last_update"] = time.time()
             st.rerun()
         st.markdown("</div>", unsafe_allow_html=True)
+    else:
+        st.markdown(
+            "<div class='wait-box'>⏳ 방장(선생님)이 대결 진행 버튼을 누르고 있습니다. 잠시만 기다려 주세요!</div>",
+            unsafe_allow_html=True,
+        )
 
-    # 결과 안내
     if game_state["match_results"]:
         st.write(" **직전 라운드 대결 결과:**")
         for r in game_state["match_results"]:
             st.success(r)
 
 # ----------------------------------------------------
-# [4] 대망의 우승자 연출
+# [4] 단 1명의 최종 우승자 연출
 # ----------------------------------------------------
 if game_state["champion"]:
     st.balloons()
